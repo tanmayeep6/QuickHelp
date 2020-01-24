@@ -24,6 +24,7 @@ public class CustomerDaoImple implements CustomerDao{
 		String flag="1";
 		String type="U";
 		//Login Table
+		try {
 				String sql= "insert into login values (?,?,?,?)";
 				int a=jdbctemplate.update(sql, new Object[] { 
 						
@@ -32,6 +33,7 @@ public class CustomerDaoImple implements CustomerDao{
 						type,
 						flag
 				});
+		
 				System.out.println(a+"inserted into login");
 				Date date_in= new Date();
 				int Location_id=1;
@@ -53,7 +55,13 @@ public class CustomerDaoImple implements CustomerDao{
 				customer.getPassword()
 				
 				});
-		System.out.println(a+"inserted into customer");
+				System.out.println(a+"inserted into customer");
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
+		
 				
 		return true;
 	

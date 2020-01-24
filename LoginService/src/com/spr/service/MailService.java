@@ -31,8 +31,8 @@ public class MailService
 			
 			
 			mimeHelper.setFrom("QuickHelp");
-			mimeHelper.setSubject("Password Reset Link");
-			mimeHelper.setText("Your Password is : "+password,true);
+			mimeHelper.setSubject("Password Reset Link :");
+			mimeHelper.setText("http://localhost:8080/LoginService/PasswordReset.jsp");
 			mailSender.send(message);
 		} catch (MessagingException e) {
 			System.out.println("Error Sending email "+ e.getMessage());

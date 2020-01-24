@@ -15,9 +15,9 @@ public class CustomerServiceImple implements CustomerService {
 	@Autowired
 	private CustomerDao Dao;
 	@Override
-	public void addCustomer(Customer customer) {
+	public boolean addCustomer(Customer customer) {
 		System.out.println("Customer services..........");
-		Dao.addCustomer(customer);
+		return Dao.addCustomer(customer);
 	}
 	
 }

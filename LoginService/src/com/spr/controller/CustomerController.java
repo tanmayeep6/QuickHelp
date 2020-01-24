@@ -28,13 +28,22 @@ public class CustomerController {
 	public String insert(@ModelAttribute("cust")Customer cust,ModelMap model) {
 		
 		
-		System.out.println("hey"+cust);
-		custService.addCustomer(cust);
+		
 		try {
 			
-			
-			System.out.println("success");
-			return "Index";
+			System.out.println("hey"+cust);
+			boolean b=custService.addCustomer(cust);
+			if(b)
+			{
+
+				System.out.println("success");
+				return "Index";
+			}
+			else
+			{
+				System.out.println("fail");
+				return "RegistrationCustomer";
+			}
 			
 		}catch(Exception e){
 			System.out.println("Fail");
