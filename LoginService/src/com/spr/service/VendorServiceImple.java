@@ -12,6 +12,7 @@ public class VendorServiceImple implements VendorService {
 	@Autowired
 	private VendorDaoImple vendorimple;
 	
+	@Override
 	public void insert(Vendor vendor) {
 		System.out.println("Vendor services..........");
 		vendorimple.insert(vendor);

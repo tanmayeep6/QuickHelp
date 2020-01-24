@@ -25,14 +25,14 @@
 		 <a href="RegisterCustomer.jsp" >Customer Registration</a>
 		</div>
 		<div class="col-8 " style="width: 340px ; margin: 50px auto;  display: flex; justify-content: center;" >
-			<form action="regis" onsubmit="return validation()" method="post">
-			<h2 class="text-center">Registration</h2>
-			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="vFirstName" placeholder="First Name"><div></div> </div>
-			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="vLastName" placeholder="Last Name"><div></div> </div>
+			<form action="regisC" onsubmit="return validation()" method="post">
+			<h2 class="text-center"> Customer Registration</h2>
+			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="c_first_name" placeholder="First Name"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="c_last_name" placeholder="Last Name"><div></div> </div>
 			<div class="form-group" >Gender :
-			<select name = "vgender" id = "
+			<select name = "gender" id = "
 			gender">
-							<option value="">Select Occupation</option>
+							<option value="">Select Gender</option>
 			               <option value = "male" >male</option>
 			               <option value = "female">female</option>
 			               <option value = "others">others</option>
@@ -40,9 +40,9 @@
 			      </div>
 			<!-- <div class="form-group"><input class="form-control" type="text" name="gender" placeholder="Gender"> </div>
 			<div class="form-group"><input class="form-control" type="text" name="gender" placeholder="Gender"> </div>-->
-			<div class="form-group"><input class="form-control" type="text" id="contact" name="vcontactNo" placeholder="Contact"><div></div> </div>
-			<div class="form-group"><input class="form-control" type="email" id="mail" name="vemail" placeholder="abc@xyz.com"><div></div>  </div>
-			<div class="form-group">
+			<div class="form-group"><input class="form-control" type="text" id="contact" name="contact" placeholder="Contact"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="email" id="mail" name="email" placeholder="abc@xyz.com"><div></div>  </div>
+			<!-- <div class="form-group">
 			                    <label>UserType:</label>
 			                 
 			                    <select class="text-center" name="usertype" id="usertype">
@@ -53,11 +53,11 @@
 			                       
 			                      </select>
 			                      <span id="usertypes" class="text-danger font-weight-bold"></span>
-			 </div>
-			 <div class="form-group"><input class="form-control" type="text" id="address" name="area" placeholder="Area"><div></div>  </div>
-			<div class="form-group"><input class="form-control" type="text" id="occupation" name="occupation" placeholder="Services"><div></div>  </div>
-			<!--<div class="form-group"><input class="form-control" type="text" name="UserName" placeholder="Username"> </div>-->
-			<div class="form-group"><input class="form-control"  type="password" id="Password" name="Password" placeholder="Password"><div></div> </div>
+			 </div> -->
+			 <div class="form-group"><input class="form-control" type="text" id="address" name="address" placeholder="Area"><div></div>  </div>
+			<div class="form-group"><input class="form-control" type="text" id="occupation" name="occupation" placeholder="occupation"><div></div>  </div>
+			<div class="form-group"><input class="form-control" type="text" name="zipcode" placeholder="Zipcode"> </div>
+			<div class="form-group"><input class="form-control"  type="password" id="Password" name="password" placeholder="Password"><div></div> </div>
 			<div class="form-group"><input class="form-control"  type="password" id="c_Password" name="c_Password" placeholder="Confirm Password"><div></div> </div>
 			<input class="btn btn-danger" type="submit" value="Registration">
 			</form>
