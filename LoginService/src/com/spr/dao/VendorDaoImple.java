@@ -1,12 +1,17 @@
 package com.spr.dao;
 
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.spr.dto.Customer;
 import com.spr.dto.Vendor;
 
 @Repository
@@ -65,6 +70,29 @@ public class VendorDaoImple implements VendorDao{
 		return true;
 	}
 
-	
+	/* Listing the customer*/
+	@Override
+	public List<Vendor> getAll() {
+		System.out.println("getAlllll");
+		 String sql = "SELECT v_first_name,v_last_name,emai,join_date,v_area FROM vendor";
+		 System.out.println(sql);
+		    List<Vendor> listV = jdbctemplate.query(sql, new RowMapper<Vendor>() {
+		    
+		        @Override
+		        public Vendor mapRow(ResultSet rs, int rowNum) throws SQLException {
+		        	Vendor aVendor = new Vendor();
+		        	aVendor.setvFirstName(rs.getString("v_first_name"));
+		        	aVendor.setvLastName(rs.getString("v_last_name"));
+		        	aVendor.setVemail(rs.getString("emai"));
+		        	aVendor.setDate(rs.getDate("join_date"));
+		        	aVendor.setArea(rs.getString("v_area"));
+		        	return aVendor;
+		        }
+		 
+		    });
+		 
+		    return listV;
+		
+	}
 
 }

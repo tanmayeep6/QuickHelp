@@ -80,9 +80,9 @@ public class CustomerDaoImple implements CustomerDao{
 		        	Customer acustomer = new Customer();
 		        	acustomer.setC_first_name(rs.getString("c_first_name"));
 		        	acustomer.setC_last_name(rs.getString("c_last_name"));
-		        	acustomer.setEmail(rs.getString("email"));
-		        	acustomer.setDate(rs.getDate("date"));
-		        	acustomer.setAddress(rs.getString("address"));
+		        	acustomer.setEmail(rs.getString("emai"));
+		        	acustomer.setDate(rs.getDate("join_date"));
+		        	acustomer.setAddress(rs.getString("area"));
 		        	System.out.println(acustomer);
 		           return acustomer;
 		        }

@@ -33,7 +33,10 @@ public class MailController {
 	public ModelAndView addStudentAction(ModelAndView ref,@RequestParam("email") String email,HttpServletRequest req)
 	{
 		boolean validemail=mailDao.isMailExist(email);
-		if(validemail)
+		
+		
+		try {
+		 if(validemail)
 		{
 			String pass=mailDao.getPassword(email);
 			mailservice.sendMail(email, pass);
@@ -41,10 +44,16 @@ public class MailController {
 			ref.setViewName("forgotPassword");
 		}
 		else
-		{
+			{
 			ref.addObject("emailinvalid", "Email Doesnt Exist");	
 			ref.setViewName("forgotPassword");
 			}
+		
+			
+		} catch (Exception e) {
+			ref.addObject("serveError", "Server Error");
+			ref.setViewName("forgotPassword");
+		}
 		return ref;
 		
 	}

@@ -41,9 +41,8 @@ public class LoginDaoImple implements LoginDao{
 				}
 			});
 		    System.out.println(log1 + "Log1111111");
-			return log1;
-		
+			return log1;	
 	}
-
+	
 
 }

@@ -26,8 +26,9 @@
 				</div>
 
 			<button type="submit" class="btn btn-danger btn-lg" style="margin-top:20px;">Submit</button>
-			<p style="color:red;font-size:20px">${emailinvalid }</p>
+			<p style="color:blue;font-size:20px">${emailinvalid }</p>
 			<p style="color:green;font-size:20px">${emailsuccess}</p>
+			<h4 style="color:red;">${serveError}</h4>
 			
 	</form>	
 	

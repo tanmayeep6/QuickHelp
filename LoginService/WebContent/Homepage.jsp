@@ -60,7 +60,9 @@
 							  <button class="dropbtn">Profile</button>
 							  <div class="dropdown-content">
 							  	<a href="#">Update</a>
-							    <a href="#">Logout</a>
+							    <form method="post" action="logout">
+								    <input class="btn btn-light" type="submit" value="Logout"/>
+								</form>
 							  </div>
 							</div>
 					</li>

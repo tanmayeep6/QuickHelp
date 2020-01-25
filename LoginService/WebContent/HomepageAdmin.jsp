@@ -27,13 +27,13 @@
 	</nav>
 	<div style="display:flex; align-items:center; justify-content:center "  >
 	  
-	   <form action="user">
+	   <form action="userlist" method="get">
 	    <button class="btn btn-primary mr-5 " type="submit" name="submit"> User</button>
 	</form>
 	
 	
 	<div style="display:flex; align-items:center; justify-content:center "  >
-		<form id="main" method="post" name="main" action="vendorDetRed.jsp" onsubmit="redirect(this);">
+		<form action="vendorlist" method="get">
 	    <button class="btn btn-primary mr-5 " type="submit" name="subVendor"> Vendor </button>
 	</form>
 		</div>	

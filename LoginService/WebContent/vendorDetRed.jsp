@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,14 +43,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                    	<c:forEach var="contact" items="${listContact}" >
                         <tr>
                             <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>A</td>
-                            <td>P</td>
-                            <td>t</td>
-                            <td class="text-right">V</td>
-                            <td class="text-right"> M </td>
+                            <td>${contact.vFirstName}</td>
+                            <td>${contact.vLastName}</td>
+                            <td>${contact.vemail}</td>
+                            <td class="text-right">${contact.date}</td>
+                            <td class="text-right"> ${contact.area} </td>
                         </tr>
+                        </c:forEach> 
            			 </tbody>
                 </table>
             </div>

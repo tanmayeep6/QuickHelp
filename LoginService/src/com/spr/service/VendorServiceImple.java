@@ -1,9 +1,12 @@
 package com.spr.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spr.dao.VendorDaoImple;
+import com.spr.dto.Customer;
 import com.spr.dto.Vendor;
 
 @Service
@@ -14,7 +17,11 @@ public class VendorServiceImple implements VendorService {
 	
 	@Override
 	public void insert(Vendor vendor) {
-		System.out.println("Vendor services..........");
 		vendorimple.insert(vendor);
+	}
+	@Override
+	public List<Vendor> getAll() {
+		System.out.println("Vendor services..........");
+		return vendorimple.getAll();
 	}
 }

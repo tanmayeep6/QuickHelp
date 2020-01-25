@@ -56,9 +56,10 @@ public class CustomerController {
 	}
 	
 	/*Listing*/
-	@RequestMapping(value="/user")
+	@RequestMapping(value="/userlist",method=RequestMethod.GET)
 	public ModelAndView listContact(ModelAndView model) throws IOException{
 		System.out.println("list entering.....");
+		
 	    List<Customer> listContact = custService.getAll();
 	    for (Customer customer : listContact) {
 			System.out.println(customer);

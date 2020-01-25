@@ -21,7 +21,7 @@
 <form action="login" method="post">
 			<h2 class="text-center text-success ">Sign in</h2> 
 			<p class="text-danger" >${msg}</p>
-			<div class="form-group" style="width:40vh;" ><input class="form-control" type="text" name="UserName" placeholder="Username"> </div>
+			<div class="form-group" style="width:40vh;" ><input class="form-control" type="text" name="UserName" placeholder="Email"> </div>
 			<div class="form-group" style="width:40vh;" ><input	class="form-control"  type="password" name="Password" placeholder="Password"></div> 
 			<input class="btn btn-danger mr-5" type="submit" value="Login"><a href="forgot">Forget password?</a>
 </form></div>	

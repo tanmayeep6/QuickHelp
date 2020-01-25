@@ -35,7 +35,7 @@ public class MailService
 			mimeHelper.setSubject("Password Reset Link :");
 			mimeHelper.setText("http://192.168.56.1:8080/LoginService/PasswordReset.jsp?email=emailId");
 			mailSender.send(message);
-		} catch (MessagingException e) {
+		} catch (Exception e) {
 			System.out.println("Error Sending email "+ e.getMessage());
 		}
 		
