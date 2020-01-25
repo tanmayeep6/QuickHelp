@@ -1,9 +1,13 @@
 package com.spr.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.spr.dto.Customer;
@@ -61,10 +65,33 @@ public class CustomerDaoImple implements CustomerDao{
 		{
 			return false;
 		}
-		
-				
 		return true;
-	
 	}
+	/* Listing the customer*/
+	@Override
+	public List<Customer> getAll() {
+		System.out.println("getAlllll");
+		 String sql = "SELECT c_first_name,c_last_name,emai,join_date,area FROM customer";
+		 System.out.println(sql);
+		    List<Customer> listContact = jdbctemplate.query(sql, new RowMapper<Customer>() {
+		    
+		        @Override
+		        public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
+		        	Customer acustomer = new Customer();
+		        	acustomer.setC_first_name(rs.getString("c_first_name"));
+		        	acustomer.setC_last_name(rs.getString("c_last_name"));
+		        	acustomer.setEmail(rs.getString("email"));
+		        	acustomer.setDate(rs.getDate("date"));
+		        	acustomer.setAddress(rs.getString("address"));
+		        	System.out.println(acustomer);
+		           return acustomer;
+		        }
+		 
+		    });
+		 
+		    return listContact;
+		
+	}
+
 }
 

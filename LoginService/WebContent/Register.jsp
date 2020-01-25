@@ -26,7 +26,7 @@
 		</div>
 		<div class="col-8 " style="width: 340px ; margin: 50px auto;  display: flex; justify-content: center;" >
 			<form action="regis" onsubmit="return validation()" method="post">
-			<h2 class="text-center">Registration</h2>
+			<h2 class="text-center">Vendor Registration</h2>
 			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="vFirstName" placeholder="First Name"><div></div> </div>
 			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="vLastName" placeholder="Last Name"><div></div> </div>
 			<div class="form-group" >Gender :

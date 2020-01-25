@@ -1,5 +1,7 @@
 package com.spr.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,8 @@ public class LoginController {
 	@Autowired
 	private LoginService loginservice;
 	
+	@Autowired
+	HttpSession session;
 	
 	public void setLoginservice(LoginService loginservice) {
 		this.loginservice = loginservice;
@@ -24,11 +28,28 @@ public class LoginController {
 	public ModelAndView userLogin() {
 
 		ModelAndView mv = new ModelAndView();
+		try
+		{
+			if(session.getAttribute("slog").equals("1")){
+				if(session.getAttribute("type").equals("A")){
+				mv.setViewName("HomepageAdmin");
+				}
+				else if(session.getAttribute("type").equals("U")){
+				mv.setViewName("Homepage");
+				}
+				else{
+				mv.setViewName("HomepageVendor");
+				}
+			}
+			else{
+				mv.setViewName("Index");
+				}
+			}
+		catch(NullPointerException e){
 			mv.setViewName("Index");
-		
+			}
 		return mv;
-
-	}
+		}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ModelAndView userLogin(@RequestParam("UserName") String UserName, @RequestParam("Password") String Password) {
 		System.out.println("para received....................");
@@ -41,6 +62,10 @@ public class LoginController {
 		try {
 			mv.addObject("success", "Login Successful.");
 			Login log1 = loginservice.validateUser(log);
+			session.setAttribute("username", log1.getEmail());
+			session.setAttribute("type", log1.getUserType());
+			session.setAttribute("slog", "1");
+			System.out.println();
 				
 			if(log1.getUserType().equals("A"))
 					mv.setViewName("HomepageAdmin");
@@ -57,6 +82,18 @@ public class LoginController {
 		}
 		return mv;
 	}
-
-
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.POST)
+	public ModelAndView userLogout() {
+		System.out.println("para logout received....................");
+		ModelAndView mv = new ModelAndView();
+		try {
+		session.invalidate();
+		mv.setViewName("Index");
+		} catch (Exception e) {
+		mv.setViewName("Index");
+		}
+	return mv;
+	}
+	
 }

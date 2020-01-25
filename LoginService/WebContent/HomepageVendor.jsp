@@ -4,17 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome Vendor</title>
+<title>Homepage Vendor</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
-
+<style><%@include file="UserHomePage.css"%></style>
 </head>
-<body>
 
+<body>
 
 <div class="container ">
     <!-- Navigation -->
@@ -27,28 +27,57 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Services</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
+                         <div class="dropdown">
+							  <button class="dropbtn">Home</button>
+							  <div class="dropdown-content">
+							  
+							  </div>
+							</div>
+                     </li>  
+                      <li class="nav-item active">
+                         <div class="dropdown">
+							  <button class="dropbtn">Add Services</button>
+							  <div class="dropdown-content">
+							  
+							  </div>
+							</div>
+                     </li>  
+                     <li class="nav-item">
+                         <div class="dropdown">
+							  <button class="dropbtn">Contact</button>
+							  <div class="dropdown-content pl-3">
+							  	<p>
+									Customer Care :<br>
+									+420<br>
+															  	
+							  	 </p>
+							  </div>
+							</div>
                     </li>
                  	
-                 	  <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Profile</a>
-                    </li>
-                </ul>
+                    
+                    <li> 
+                    		<div class="dropdown">
+							  <button class="dropbtn">Profile</button>
+							  <div class="dropdown-content">
+							  	<a href="#">Update</a>
+							   
+								<form method="post" action="logout">
+								    <input class="btn btn-light" type="submit" value="Logout"/>
+								</form>
+							
+							  </div>
+							</div>
+                    
+					</li>
+           
+               </ul>
+               
             </div>
+             
+      
         </div>
-    </nav>
-    
-
-</div>
+      </nav> 
+ </div>
 </body>
 </html>

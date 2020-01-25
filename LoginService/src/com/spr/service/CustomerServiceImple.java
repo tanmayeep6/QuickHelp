@@ -1,5 +1,7 @@
 package com.spr.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -16,8 +18,13 @@ public class CustomerServiceImple implements CustomerService {
 	private CustomerDao Dao;
 	@Override
 	public boolean addCustomer(Customer customer) {
-		System.out.println("Customer services..........");
+		
 		return Dao.addCustomer(customer);
+	}
+	@Override
+	public List<Customer> getAll() {
+		System.out.println("Customer services..........");
+		return Dao.getAll();
 	}
 	
 }

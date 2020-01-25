@@ -4,17 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome Customer</title>
+<title>Homepage Customer</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-
-
+<style><%@include file="UserHomePage.css"%></style>
 </head>
-<body>
 
+<body>
 
 <div class="container ">
     <!-- Navigation -->
@@ -27,28 +25,53 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Services</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
+                         <div class="dropdown">
+							  <button class="dropbtn">Home</button>
+							  <div class="dropdown-content">
+							  
+							  </div>
+							</div>
+                     </li>   
+                      <li class="nav-item">
+                         <div class="dropdown">
+							  <button class="dropbtn">Contact</button>
+							  <div class="dropdown-content pl-3">
+							  	<p>
+									Customer Care :<br>
+									+420<br>
+															  	
+							  	 </p>
+							  </div>
+							</div>
                     </li>
                  	
-                 	  <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Profile</a>
+                    <li class="nav-item">
+                        <div class="dropdown">
+							  <button class="dropbtn">Search Services</button>
+							  <div class="dropdown-content">
+							  	<a href="#">Laundry</a>
+							    <a href="#">Hardware</a>
+							    <a href="#">Electrician</a>
+							    
+							  </div>
+							</div>
                     </li>
-                </ul>
+                    <li>   <div class="dropdown">
+							  <button class="dropbtn">Profile</button>
+							  <div class="dropdown-content">
+							  	<a href="#">Update</a>
+							    <a href="#">Logout</a>
+							  </div>
+							</div>
+					</li>
+           
+               </ul>
+               
             </div>
+             
+      
         </div>
-    </nav>
-    
-
-</div>
+      </nav> 
+ </div>
 </body>
 </html>

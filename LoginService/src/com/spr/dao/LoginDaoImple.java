@@ -31,6 +31,7 @@ public class LoginDaoImple implements LoginDao{
 		    	
 				@Override
 				public Login mapRow(ResultSet rs, int rowNum) throws SQLException {
+					
 					Login log=new Login();
 					log.setEmail(rs.getString(1));
 					log.setPassword(rs.getString(2));

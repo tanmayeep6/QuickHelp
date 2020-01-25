@@ -44,11 +44,11 @@
                     <tbody>
                         <tr>
                             <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Adhyaksha</td>
-                            <td>Pawar</td>
-                            <td>tumSirfMeriHo@xxx</td>
-                            <td class="text-right">Vo Valentine ki Raat</td>
-                            <td class="text-right"> Majnu Gali </td>
+                            <td>A</td>
+                            <td>P</td>
+                            <td>t</td>
+                            <td class="text-right">V</td>
+                            <td class="text-right"> M </td>
                         </tr>
            			 </tbody>
                 </table>
