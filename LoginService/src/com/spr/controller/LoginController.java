@@ -50,19 +50,19 @@ public class LoginController {
 			}
 		return mv;
 		}
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ModelAndView userLogin(@RequestParam("UserName") String UserName, @RequestParam("Password") String Password) {
+	@RequestMapping(value = "/abc", method = RequestMethod.POST)
+	public ModelAndView userLogin(@RequestParam("email") String email, @RequestParam("password") String password) {
 		System.out.println("para received....................");
 		ModelAndView mv = new ModelAndView();
 
 		Login log = new Login();
-		log.setEmail(UserName);
-		log.setPassword(Password);
+		log.setEmail(email);
+		log.setPassword(password);
 
 		try {
 			mv.addObject("success", "Login Successful.");
 			Login log1 = loginservice.validateUser(log);
-			session.setAttribute("username", log1.getEmail());
+			session.setAttribute("email", log1.getEmail());
 			session.setAttribute("type", log1.getUserType());
 			session.setAttribute("slog", "1");
 			System.out.println();

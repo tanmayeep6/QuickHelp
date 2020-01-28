@@ -1,6 +1,5 @@
 package com.spr.service;
 
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.mail.javamail.JavaMailSender;

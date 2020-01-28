@@ -1,43 +1,51 @@
 package com.spr.dto;
 
 public class Login {
-private String Email;
-private String Password;
-private String UserType;
+private String email;
+private String password;
+private String userType;
 
 
-	public Login(String email, String password, String userType) {
+public Login(String email, String password, String userType) {
 	super();
-	Email = email;
-	Password = password;
-	UserType = userType;
+	this.email = email;
+	this.password = password;
+	this.userType = userType;
 }
-	public Login() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public String getEmail() {
-		return Email;
-	}
-	public void setEmail(String email) {
-		Email = email;
-	}
-	public String getPassword() {
-		return Password;
-	}
-	public void setPassword(String password) {
-		Password = password;
-	}
-	public String getUserType() {
-		return UserType;
-	}
-	public void setUserType(String userType) {
-		UserType = userType;
-	}
-	@Override
-	public String toString() {
-		return "Login [Email=" + Email + ", Password=" + Password + ", UserType=" + UserType + "]";
-	}
 
 
+public Login() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+
+public String getEmail() {
+	System.out.println("hiee");
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getPassword() {
+	return password;
+}
+public void setPassword(String password) {
+	this.password = password;
+}
+public String getUserType() {
+	return userType;
+}
+public void setUserType(String userType) {
+	this.userType = userType;
+}
+
+
+@Override
+public String toString() {
+	return "Login [email=" + email + ", password=" + password + ", userType=" + userType + "]";
+}
+
+
+	
 }

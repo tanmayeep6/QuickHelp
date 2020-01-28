@@ -1,0 +1,104 @@
+@charset "ISO-8859-1";
+
+.bgimg{
+	background-image : url('https://www.123freevectors.com/wp-content/original/147779-white-and-gold-blurred-lights-background-design.jpg');
+	background-size : 100% 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height:650px;
+	
+	<!--#1abc9c -->
+	
+}
+
+.ourservices{
+	padding :100px 0px 60px;
+	height : 700px;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.headerset{
+	padding-top:250px;
+	box-sizing:border-box;
+}
+.headerset h2{
+	font-size : 30px;
+}
+
+.headerset h1{
+	font-size : 50px;
+	font-weight : bold;
+}
+
+.rowsetting{
+	padding : 10px;
+	
+	margin :80px 0px !important;
+}
+
+.heights{
+	height : 100vh;
+}
+
+.imgsetting{
+	border-radius :50%;
+	height : 100px;
+	width : 100px;
+	
+	color: white;
+}
+
+.fa-question{
+	padding-top:20px;
+}
+.fa-phone{
+	padding-top:20px;
+}
+.fa-globe{
+	padding-top:20px;
+}
+
+.rowsetting p{
+	color : #6c757d ;
+}
+.title{
+	font-weight : bold;
+	font-size: 5vh;
+}
+
+.imgdimensions {
+	 height: 200px;
+	 width: 200px;
+}
+
+.footerheight{
+	height: 80px;
+}
+
+.btnWidth{
+	width: 80px;
+}
+
+
+
+@media(min-width: 992px){
+	
+}
+
+@media(min-width:768),(max-width:991px){
+	
+}
+
+@media(min-width:575px),(max-width:767px){
+	
+}
+@media(min-width: 480px),(max-width:574px){
+	
+}
+@media(max-width:479px){
+	
+}

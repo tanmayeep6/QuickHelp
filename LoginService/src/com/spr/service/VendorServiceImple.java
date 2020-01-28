@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spr.dao.VendorDaoImple;
-import com.spr.dto.Customer;
 import com.spr.dto.Vendor;
 
 @Service
